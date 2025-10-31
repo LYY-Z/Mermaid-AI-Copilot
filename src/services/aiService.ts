@@ -17,8 +17,8 @@ export async function generateMermaidCode(description: string) {
     }
 
     return { success: true, code: data.code };
-  } catch (err) {
-    console.error('生成失败:', err);
-    return { success: false, error: err.message || '请求出错' };
+  } catch (error) {
+    console.error('生成失败:', error);
+    return { success: false, error: error.message || '请求出错' };
   }
 }
